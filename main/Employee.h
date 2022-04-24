@@ -1,11 +1,15 @@
 #pragma once
+#include <iostream>
 #include <string>
 using namespace std;
-
-class employee
+class Employee
 {
 private:
-	string name, surname;
+	string na;
+	string surname;
+	string gender;
 	int age, experience;
-
+public:
+	void getemployee();
+		
 };
