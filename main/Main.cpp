@@ -1,4 +1,5 @@
 #include "Employee.h"
+#include "Programmer.h"
 #include <iostream>
 using namespace std;
 
@@ -6,6 +7,7 @@ int main()
 {
 	int a;
 	string fg;
-	Employee t;
-	t.getemployee();
+	Programmer y;
+	y.getemployee();
+	y.getfavoritelan();
 }

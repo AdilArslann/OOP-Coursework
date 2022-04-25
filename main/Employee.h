@@ -4,8 +4,8 @@
 using namespace std;
 class Employee
 {
-private:
-	string na;
+protected:
+	string name;
 	string surname;
 	string gender;
 	int age, experience;
