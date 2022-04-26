@@ -1,13 +1,12 @@
 #pragma once
 #include "Employee.h"
-#include <string>
 #include <iostream>
+#include <string>
 using namespace std;
-
-class Programmer : public Employee
+class Translator : public Employee
 {
 protected:
-	string planguage;
+	string favoritelan;
 	int numoflan;
 public:
 	void getemployeeinfo();

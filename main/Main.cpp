@@ -7,7 +7,6 @@ int main()
 {
 	int a;
 	string fg;
-	Programmer y;
-	y.getemployee();
-	y.getfavoritelan();
+	Programmer* y;
+	y.getemployeeinfo();
 }

@@ -10,6 +10,7 @@ protected:
 	string gender;
 	int age, experience;
 public:
-	void getemployee();
+	virtual void getemployeeinfo() = 0;
+
 		
 };

@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-void Employee :: getemployee()
+void Employee::getemployeeinfo()
 {
 	cout << "Please enter the name, surname and gender of the employee" << endl;
 	cin >> name >> surname >> gender;
