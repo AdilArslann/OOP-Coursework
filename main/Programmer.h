@@ -1,15 +1,9 @@
 #pragma once
-#include "Employee.h"
-#include <string>
-#include <iostream>
-using namespace std;
-
-class Programmer : public Employee
+class Programmer
 {
 protected:
-	string planguage;
-	int numoflan;
+	int age, experience, numoflan, thad;//age = age, experience = total years worked, numoflan = total number of programming languages known, thad = total hours worked every day. 
 public:
-	void getemployeeinfo();
+	int getexperience();
 };
 

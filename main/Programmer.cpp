@@ -1,16 +1,22 @@
 #include "Programmer.h"
 #include <iostream>
-#include <string>
 using namespace std;
 
-void Programmer :: getemployeeinfo()
+int Programmer::getexperience()
 {
-	cout << "Please enter the name, surname and gender of the employee" << endl;
-	cin >> name >> surname >> gender;
-	cout << endl << "Please enter the age and experience of the employee" << endl;
-	cin >> age >> experience;
-	cout << endl << "Write the favorite programming language of the employee" << endl;
-	cin >> planguage;
-	cout << endl << "Name and Surname of the employee: " << name << " " << surname << endl;
-	cout << "Age: " << age << "   " << "Gender: " << gender << "   " << "Experience: " << experience << "   " << "Favorite Language: "<< planguage;
+    cout << "Please enter the age of the programmer:";
+    cin >> age;
+    while(age < 18)
+    {
+        cout << "The age of the programmer cannot be below 18 years old due to legal reasons, please give an age bigger than 17." << endl;
+        cin >> age;
+    }
+    cout << "Please enter the total experience of the programmer:";
+    cin >> experience;
+    while(age - 18 < experience)
+    {
+        cout << "It is impossible, please make sure that you are typing correctly." << endl << "Please enter the total experience of the programmer:";
+        cin >> experience;
+    }
+    return experience;
 }
