@@ -6,9 +6,9 @@ int Programmer::getexperience()
 {
     cout << "Please enter the age of the programmer:";
     cin >> age;
-    while(age < 18)
+    while(age < 18 || age > 60)
     {
-        cout << "The age of the programmer cannot be below 18 years old due to legal reasons, please give an age bigger than 17." << endl;
+        cout << "The age of the programmer cannot be below 18 years old due to legal reasons, please give an age bigger than 17. (We only hire people who are at age in between 18-60)" << endl;
         cin >> age;
     }
     cout << "Please enter the total experience of the programmer:";

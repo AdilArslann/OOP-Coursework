@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Junior.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Programmer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Junior.h" />
     <ClInclude Include="Programmer.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
