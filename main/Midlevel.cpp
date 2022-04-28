@@ -32,6 +32,11 @@ void Midlevel::calculate()
 	cout << "The employee would also get an initial bonus of " << bonus << endl;
 	cout << "Please enter the age you would like to retire or quit from this job:";
 	cin >> page;
+	while (age >= page)
+	{
+		cout << "Please enter a proper age that you would like to retire or quit from this job:";
+		cin >> page;
+	}
 	for (int j = 0; j < (page - age); j++)
 	{
 		for (int i = 0; i < 12; i++)
