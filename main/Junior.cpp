@@ -8,7 +8,7 @@ void Junior::getinfo(int n, int m)
 	experience = m;
 	cout << "Please enter the total programming languages the person knows:";
 	cin >> numoflan;
-	while (numoflan < 0 )
+	while (numoflan < 1 )
 	{
 		cout << "That is impossible, Enter the total programming languages the person knows:";
 		cin >> numoflan;
