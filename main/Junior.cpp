@@ -6,19 +6,19 @@ void Junior::getinfo(int n, int m)
 {
 	age = n;
 	experience = m;
-	cout << "Please enter the total programming languages the person knows:";
-	cin >> numoflan;
-	while (numoflan < 1 )
+	cout << "Please enter the total programming languages the person knows: ";
+	while (!(cin >> numoflan) || numoflan < 1 )
 	{
-		cout << "That is impossible, Enter the total programming languages the person knows:";
-		cin >> numoflan;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cout << "That is impossible, Enter the total programming languages the person knows: ";
 	}
-	cout << "Please enter the total work hours a day:";
-	cin >> thad;
-	while (thad < 0 || thad > 15)
+	cout << "Please enter the total work hours a day: ";
+	while (!(cin >> thad) || (thad < 0 || thad > 15))
 	{
-		cout << "Please make sure you are typing correctly, the value has to be between 0 and 15";
-		cin >> thad;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cout << "Please make sure you are typing correctly, the value has to be between 0 and 15: ";
 	}
 }
 
@@ -32,12 +32,12 @@ void Junior::calculate()
 	month = day * 30;
 	cout << "the employee would make " << day << " a day." << endl;
 	cout << "And would make " << month << " a month." << endl;
-	cout << "Please enter the age you would like to retire or quit from this job:";
-	cin >> page;
-	while (age >= page)
+	cout << "Please enter the age you would like to retire or quit from this job: ";
+	while (!(cin >> page) || (age >= page || page >= 60))
 	{
-		cout << "Please enter a proper age that you would like to retire or quit from this job:";
-		cin >> page;
+		cin.clear();
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cout << "Please enter a proper age that you would like to retire or quit from this job: ";
 	}
 	for(int j = 0; j < (page - age); j++)
 	{
