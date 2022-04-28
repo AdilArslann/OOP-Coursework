@@ -7,18 +7,18 @@ using namespace std;
 void getageexp(int* a, int* b)
 {
     cout << "Please enter the age of the programmer:";
-    cin >> *a;
-    while (*a < 18 || *a > 60)
+    while (!(cin >> *a) || (*a < 18 || *a > 60))
     {
-        cout << endl << "The age of the programmer cannot be below 18 years old due to legal reasons, please give an age bigger than 17. (We only hire people who are at age in between 18-60)" << endl;
-        cin >> *a;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "The age of the programmer cannot be below 18 years old due to legal reasons, please give an age bigger than 17. (We only hire people who are at age in between 18-60)" << endl;
     }
     cout << "Please enter the total experience of the programmer:";
-    cin >> *b;
-    while (*a - 18 < *b)
+    while (!(cin >> *b) || *a - 18 < *b)
     {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cout << "It is impossible, please make sure that you are typing correctly." << endl << "Please enter the total experience of the programmer:";
-        cin >> *b;
     }
 }
 int main()
