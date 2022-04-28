@@ -23,17 +23,18 @@ int main()
 {
 	int a, b;
     getageexp(&a, &b);
-	cout << a << b;
-	/*if (a >= 0 && a < 5)
+    Junior j;
+    Programmer* p1 = &j;
+	if(b >= 0 && b < 5)
 	{
-
+        j.getinfo(a, b);
+        p1->calculate();
 	}
-	else if (a >= 5 && a < 10)
+	else if (b >= 5 && b < 10)
 	{
 
 	}
 	else
 	{
 	}
-    */
 }

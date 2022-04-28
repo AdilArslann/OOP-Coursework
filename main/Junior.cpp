@@ -17,7 +17,7 @@ void Junior::getinfo(int n, int m)
 	cin >> thad;
 	while (thad < 0 || thad > 15)
 	{
-		cout << "hmmmmmmm Please make sure you are typing correctly the value has to be between 0 and 15" << endl;
+		cout << "Please make sure you are typing correctly, the value has to be between 0 and 15" << endl;
 		cin >> thad;
 	}
 }
@@ -25,4 +25,10 @@ void Junior::getinfo(int n, int m)
 
 void Junior::calculate()
 {
+	day = numoflan * 2;
+	day = day + (experience * 3);
+	day = day * thad;
+	month = day * 30;
+	cout << "the employee would make " << day << " a day." << endl;
+	cout << "And would make " << month << " a month." << endl;
 }
