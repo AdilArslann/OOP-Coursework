@@ -2,6 +2,7 @@
 #include "Programmer.h"
 #include "Junior.h"
 #include "Midlevel.h"
+#include "Senior.h"
 using namespace std;
 void getageexp(int* a, int* b)
 {
@@ -26,8 +27,10 @@ int main()
     getageexp(&a, &b);
     Junior j;
     Midlevel m;
+    Senior s;
     Programmer* p1 = &j;
     Programmer* p2 = &m;
+    Programmer* p3 = &s;
 	if(b >= 0 && b < 5)
 	{
         j.getinfo(a, b);
@@ -40,5 +43,7 @@ int main()
 	}
 	else
 	{
+        s.getinfo(a, b);
+        p3->calculate();
 	}
 }
