@@ -1,40 +1,36 @@
-#include "Senior.h"
+#include "Programmer.h"
 
-void Senior::getinfo(int n, int m)
+void Programmer::getinfo()
 {
-	age = n;
-	experience = m;
 	cout << "Please enter the total programming languages the person knows: ";
 	while (!(cin >> numoflan) || numoflan < 1)
 	{
 		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cin.ignore(256, '\n');
 		cout << "That is impossible, Enter the total programming languages the person knows: ";
 	}
 	cout << "Please enter the total work hours a day: ";
 	while (!(cin >> thad) || (thad < 0 || thad > 15))
 	{
 		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cin.ignore(256, '\n');
 		cout << "Please make sure you are typing correctly, the value has to be between 0 and 15: ";
 	}
 }
 
-void Senior::calculate()
+void Programmer::calculate(int n, int m)
 {
-	total = bonus;
 	day = numoflan * 2;
 	day = day + (experience * 3);
 	day = day * thad;
 	month = day * 30;
 	cout << "the employee would make " << day << " a day." << endl;
 	cout << "And would make " << month << " a month." << endl;
-	cout << "The employee would also get an initial bonus of " << bonus << endl;
 	cout << "Please enter the age you would like to retire or quit from this job: ";
 	while (!(cin >> page) || (age >= page || page >= 60))
 	{
 		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cin.ignore(256, '\n');
 		cout << "Please enter a proper age that you would like to retire or quit from this job: ";
 	}
 	for (int j = 0; j < (page - age); j++)

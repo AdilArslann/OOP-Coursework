@@ -19,16 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Junior.cpp" />
+    <ClCompile Include="Artist.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Midlevel.cpp" />
-    <ClCompile Include="Senior.cpp" />
+    <ClCompile Include="Programmer.cpp" />
+    <ClCompile Include="Translator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Junior.h" />
-    <ClInclude Include="Midlevel.h" />
+    <ClInclude Include="Artist.h" />
+    <ClInclude Include="Employee.h" />
     <ClInclude Include="Programmer.h" />
-    <ClInclude Include="Senior.h" />
+    <ClInclude Include="Translator.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

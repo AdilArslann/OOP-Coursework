@@ -1,48 +1,53 @@
-#include "Midlevel.h"
+#include "Translator.h"
 
-void Midlevel::getinfo(int n, int m)
+
+void Translator::getinfo()
 {
-	age = n;
-	experience = m;
-	cout << "Please enter the total programming languages the person knows: ";
-	while (!(cin >> numoflan) || numoflan < 1)
+	cout << "Please enter the total languages the translator knows: ";
+	while (!(cin >> numlan) || numlan < 1)
 	{
 		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		cout << "That is impossible, Enter the total programming languages the person knows: ";
+		cin.ignore(256, '\n');
+		cout << "That is impossible, Enter the total languages the translator knows: ";
 	}
 	cout << "Please enter the total work hours a day: ";
 	while (!(cin >> thad) || (thad < 0 || thad > 15))
 	{
 		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cin.ignore(256, '\n');
 		cout << "Please make sure you are typing correctly, the value has to be between 0 and 15: ";
+	}
+	cout << "Please enter the total clients translator can help each day: ";
+	while (!(cin >> ppl))
+	{
+		cin.clear();
+		cin.ignore(256, '\n');
+		cout << "Please make sure you are typing correctly:";
 	}
 }
 
-void Midlevel::calculate()
+void Translator::calculate(int n, int m)
 {
-	total = bonus;
-	day = numoflan * 2;
-	day = day + (experience * 3);
+	total = 0;
+	day = numlan * 3;
+	day = day + (ppl + experience * 1.5);
 	day = day * thad;
 	month = day * 30;
 	cout << "the employee would make " << day << " a day." << endl;
 	cout << "And would make " << month << " a month." << endl;
-	cout << "The employee would also get an initial bonus of " << bonus << endl;
 	cout << "Please enter the age you would like to retire or quit from this job: ";
 	while (!(cin >> page) || (age >= page || page >= 60))
 	{
 		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		cin.ignore(256, '\n');
 		cout << "Please enter a proper age that you would like to retire or quit from this job: ";
 	}
 	for (int j = 0; j < (page - age); j++)
 	{
 		for (int i = 0; i < 12; i++)
 		{
-			day = numoflan * 2;
-			day = day + (experience * 3);
+			day = numlan * 3;
+			day = day + (ppl + experience * 1.5);
 			day = day * thad;
 			month = day * 30;
 			total = total + month;
@@ -50,10 +55,6 @@ void Midlevel::calculate()
 		day = 0;
 		month = 0;
 		experience++;
-		if (j % 2 == 0)//considering that every 2 years the developer learns a new language
-		{
-			numoflan++;
-		}
 	}
 	cout << "The total money you would make if you worked from the age " << age << " to " << page << " is: " << total;
 }

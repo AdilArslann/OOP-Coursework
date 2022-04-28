@@ -1,13 +1,14 @@
 #pragma once
 #include <iostream>
+#include "Employee.h"
 using namespace std;
 
-class Programmer
+class Programmer :public Employee
 {
 protected:
-	int age, experience, numoflan, thad, day, month, page, total;//age = age, experience = total years worked, numoflan = total number of programming languages known, thad = total hours worked every day. 
+	int numoflan;
 public:
-	virtual void getinfo(int n, int m) = 0; //get more info about the employee
-	virtual void calculate() = 0; //calculates the monthly salary of the employee
+    void getinfo() override;
+    void calculate(int n, int m) override;
 };
 

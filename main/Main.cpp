@@ -1,49 +1,57 @@
 #include <iostream>
+#include "Employee.h"
 #include "Programmer.h"
-#include "Junior.h"
-#include "Midlevel.h"
-#include "Senior.h"
+#include "Translator.h"
+#include "Artist.h"
 using namespace std;
-void getageexp(int* a, int* b)
+
+void getageexp(int* a, int* b, int* c)
 {
-    cout << "Please enter the age of the programmer:";
+    cout << "Please enter the age of the Employee:";
     while (!(cin >> *a) || (*a < 18 || *a > 60))
     {
         cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "The age of the programmer cannot be below 18 years old due to legal reasons, please give an age bigger than 17. (We only hire people who are at age in between 18-60)" << endl;
+        cin.ignore(256, '\n');
+        cout << "The age of the Employee cannot be below 18 years old due to legal reasons, please give an age bigger than 17. (We only hire people who are at age in between 18-60)" << endl;
     }
-    cout << "Please enter the total experience of the programmer:";
+    cout << "Please enter the total experience of the Employee:";
     while (!(cin >> *b) || *a - 18 < *b)
     {
         cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "It is impossible, please make sure that you are typing correctly." << endl << "Please enter the total experience of the programmer:";
+        cin.ignore(256, '\n');
+        cout << "It is impossible, please make sure that you are typing correctly." << endl << "Please enter the total experience of the Employee:";
+    }
+    cout << "Input 0 for Programmer, 1 for Translator, 2 for Artist:";
+    while (!(cin >> *c) || (*c < 0 || *c > 2))
+    {
+        cin.clear();
+        cin.ignore(256, '\n');
+        cout << "We have only 3 employee catagories please make sure that you are typing correctly. (0, 1, 2)" << endl;
     }
 }
 int main()
 {
-	int a, b;
-    getageexp(&a, &b);
-    Junior j;
-    Midlevel m;
-    Senior s;
-    Programmer* p1 = &j;
-    Programmer* p2 = &m;
-    Programmer* p3 = &s;
-	if(b >= 0 && b < 5)
-	{
-        j.getinfo(a, b);
-        p1->calculate();
-	}
-	else if (b >= 5 && b < 10)
-	{
-        m.getinfo(a, b);
-        p2->calculate();
-	}
-	else
-	{
-        s.getinfo(a, b);
-        p3->calculate();
-	}
+	int a, b, c;
+    getageexp(&a, &b, &c);
+    Programmer p;
+    Translator t;
+    Artist ar;
+    Employee* e1 = &p;
+    Employee* e2 = &t;
+    Employee* e3 = &ar;
+    if(c == 0)
+    {
+        e1->getinfo();
+        e1->calculate(a, b);
+    }
+    else if(c == 1)
+    { 
+        e2->getinfo();
+        e2->calculate(a, b);
+    }
+    else 
+    {
+        e3->getinfo();
+        e3->calculate(a, b);
+    }
 }
