@@ -21,15 +21,12 @@
   <ItemGroup>
     <ClCompile Include="Artist.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="opperator0.cpp" />
     <ClCompile Include="Programmer.cpp" />
     <ClCompile Include="Translator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Artist.h" />
     <ClInclude Include="Employee.h" />
-    <ClInclude Include="opperator.h" />
-    <ClInclude Include="opperator0.h" />
     <ClInclude Include="Programmer.h" />
     <ClInclude Include="Translator.h" />
   </ItemGroup>
