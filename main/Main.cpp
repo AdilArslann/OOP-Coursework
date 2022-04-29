@@ -3,8 +3,10 @@
 #include "Programmer.h"
 #include "Translator.h"
 #include "Artist.h"
+#include "opperator.h"
+#include "opperator0.h"
 using namespace std;
-
+void operator<<(ostream& COUT, opperator0& print);
 void getageexp(int* a, int* b, int* c)
 {
     cout << "Please enter the age of the Employee:";
@@ -54,4 +56,17 @@ int main()
         e3->getinfo();
         e3->calculate(a, b);
     }
+    opperator0 op;
+    op.setvalues();
+    opperator op1;
+    op1 += op;
+    op -= op1;
+    cout << op;
+}
+
+void operator<<(ostream& COUT, opperator0& print)
+{
+    COUT << "l: " << print.l << endl;
+    COUT << "j: " << print.j << endl;
+    COUT << "k: " << print.k << endl;
 }
