@@ -28,6 +28,8 @@ void Translator::getinfo()
 
 void Translator::calculate(int n, int m)
 {
+	age = n;
+	experience = m;
 	total = 0;
 	day = numlan * 3;
 	day = day + (ppl + experience * 1.5);

@@ -20,6 +20,8 @@ void Programmer::getinfo()
 
 void Programmer::calculate(int n, int m)
 {
+	age = n;
+	experience = m;
 	day = numoflan * 2;
 	day = day + (experience * 3);
 	day = day * thad;

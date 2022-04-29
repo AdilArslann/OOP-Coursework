@@ -20,6 +20,8 @@ void Artist::getinfo()
 
 void Artist::calculate(int n, int m)
 {
+	age = n;
+	experience = m;
 	day = numprogram * 5;
 	day = day + (experience * 3);
 	month = day * 30 + (totalcommonth * 15);
@@ -33,7 +35,7 @@ void Artist::calculate(int n, int m)
 		cin.ignore(256, '\n');
 		cout << "Please enter a proper age that you would like to retire or quit from this job: ";
 	}
-	for (int j = 0; j <= (page - age); j++)
+	for (int j = 0; j < (page - age); j++)
 	{
 		for (int i = 0; i < 12; i++)
 		{
